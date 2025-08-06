@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package greeter;
+
+// Option for Java code generation
+option java_package = "net.obsrvr.ttpmodpoc.grpc.proto"; // Match your mod's package structure
+option java_multiple_files = true;
+
+// Option for Go code generation (will be used in the server)
+option go_package = "github.com/withObsrvr/hello-grpc-server/gen/go/greeter"; // Adjust if needed
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}

@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "ttpmodpoc",
+	"version": "${version}",
+	"name": "ttpmodpoc",
+	"description": "PoC mod to test out the TTP demo",
+	"authors": [
+		"tillmanmosley"
+	],
+	"contact": {
+		"homepage": "https://withobsrvr.com/",
+		"sources": "https://github.com/withObsrvr/ttpmodpoc"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ttpmodpoc/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.obsrvr.ttpmodpoc.Ttpmodpoc"
+		],
+		"fabric-datagen": [
+			"net.obsrvr.ttpmodpoc.TtpmodpocDataGenerator"
+		],
+		"client": [
+			"net.obsrvr.ttpmodpoc.TtpmodpocClient"
+		]
+	},
+	"mixins": [
+		"ttpmodpoc.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.11",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
